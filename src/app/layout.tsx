@@ -3,6 +3,7 @@ import "./globals.css";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { Box, ChakraProvider, DarkMode, ThemeProvider } from "@chakra-ui/react";
 import theme from "./theme";
+import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
   children,
@@ -14,7 +15,10 @@ export default function RootLayout({
       <head />
       <body>
         <CacheProvider>
-          <ChakraProvider theme={theme}>{children} </ChakraProvider>
+          <ChakraProvider theme={theme}>
+            <Navbar />
+            <Box>{children}</Box>
+          </ChakraProvider>
         </CacheProvider>
       </body>
     </html>
