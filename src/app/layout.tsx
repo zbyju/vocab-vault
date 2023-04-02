@@ -1,18 +1,22 @@
-import './globals.css'
-
-export const metadata = {
-  title: 'Vocab Vault',
-  description: 'Safely store your international knowledge.',
-}
+"use client";
+import "./globals.css";
+import { CacheProvider } from "@chakra-ui/next-js";
+import { Box, ChakraProvider, DarkMode, ThemeProvider } from "@chakra-ui/react";
+import theme from "./theme";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head />
+      <body>
+        <CacheProvider>
+          <ChakraProvider theme={theme}>{children} </ChakraProvider>
+        </CacheProvider>
+      </body>
     </html>
-  )
+  );
 }
