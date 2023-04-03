@@ -17,7 +17,20 @@ export default function RootLayout({
         <CacheProvider>
           <ChakraProvider theme={theme}>
             <Navbar />
-            <Box>{children}</Box>
+            <Box
+              w="80vw"
+              mx="auto"
+              boxShadow="xl"
+              px="10"
+              py="5"
+              borderRadius="xl"
+              bg="gray.50"
+              _dark={{
+                bg: "gray.900",
+              }}
+            >
+              {children}
+            </Box>
           </ChakraProvider>
         </CacheProvider>
       </body>

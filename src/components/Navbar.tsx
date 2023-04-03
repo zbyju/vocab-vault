@@ -12,17 +12,29 @@ export default function Navbar() {
   ];
   return (
     <Box
-      w="100vw"
-      bg="whiteAlpha.800"
+      w="60vw"
+      my="30px"
+      mx="auto"
+      borderRadius="3xl"
+      bg="whiteAlpha.700"
       _dark={{
-        bg: "blackAlpha.800",
+        bg: "blackAlpha.700",
+        borderColor: "blue.900",
       }}
       backdropFilter="auto"
       backdropBlur="3xl"
       pos="sticky"
-      top="0"
+      top="15px"
+      overflowX="hidden"
+      style={{
+        boxShadow:
+          "0 10px 15px -3px rgb(43 108 176 / 0.1), 0 4px 6px -4px rgb(43 108 176 / 0.1);",
+      }}
+      border="1px"
+      borderColor="blue.50"
     >
       <Flex
+        w="100%"
         h="100%"
         py="5"
         px="5"
